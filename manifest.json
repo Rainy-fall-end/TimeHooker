@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "timeHooker",
+    "version": "0.1",
+    "description": "timeHooker",
+    "icons": {
+        "16": "images/16.png",
+        "48": "images/48.png",
+        "128": "images/128.png"
+    },
+    "permissions": [
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "activeTab",
+        "notifications"
+    ],
+    "action": {
+        "default_icon": {
+            "16": "images/logo.jpg",
+            "48": "images/logo.jpg"
+        },
+        "default_title": "videoHooker"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "js/Everything-Hook.js",
+                "js/video.js"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}
